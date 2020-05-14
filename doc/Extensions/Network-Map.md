@@ -58,33 +58,41 @@ add in `}';` see the example below.
 ```php
 $config['network_map_vis_options'] = '{
   "nodes": {
+    "borderWidthSelected": null,
     "color": {
-      "background": "rgba(20,252,18,1)"
+      "highlight": {},
+      "hover": {}
     },
     "font": {
-      "face": "tahoma"
+      "size": 24,
+      "strokeWidth": null
     },
-    "physics": false
+    "shapeProperties": {
+      "borderRadius": null
+    },
+    "size": null
   },
   "edges": {
+    "font": {
+      "size": 19,
+      "align": "top"
+    },
     "smooth": {
       "forceDirection": "none"
     }
   },
-  "interaction": {
-    "hover": true,
-    "multiselect": true,
-    "navigationButtons": true
-  },
-  "manipulation": {
-    "enabled": true
-  },
   "physics": {
-    "barnesHut": {
-      "avoidOverlap": 0.11
+      "forceAtlas2Based": {
+      "gravitationalConstant": -200,
+      "centralGravity": 0.005,
+      "springLength": 600,
+      "springConstant": 0.09,
+      "avoidOverlap": 0.29
     },
-    "minVelocity": 0.75
+    "minVelocity": 0.92,
+    "solver": "forceAtlas2Based"
   }
+   
 }';
 ```
 
